@@ -1,0 +1,38 @@
+:root {
+    --normal-font:400;
+    --bold-font: 900;
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('../assets/forest-with-path.webp') no-repeat center center fixed;
+    background-size: cover;
+    transform: scale(1.1) translateY(-10px); /* Start zoomed-in */
+    opacity: 0.5; /* Start faded out */
+    filter: blur(5px);
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+  }
+  
+  body.loaded {
+    transform: scale(1) translateY(0); /* Zoom back to normal */
+    opacity: 1; /* Fully visible */
+    filter: blur(0);
+  }
+  
+  body.zoom {
+    transform: scale(1.1) translateY(-10px); /* Zoom out when leaving */
+    opacity: 0.5;
+  }
+  
+
+.content {
+    color: antiquewhite;
+    width: 50%;
+   display: flex;
+   justify-content: center;
+   margin-left: 25%;
+   background-color: black;
+   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7))
+}
